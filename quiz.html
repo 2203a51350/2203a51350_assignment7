@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script>
+        function res(){
+           var ele=document.getElementsByName('capital');
+            for(i=0;i<ele.length;i++)
+            {
+            if(ele[i].checked)
+            {
+                if(ele[i].value=="Delhi");
+                {
+                    document.getElementById("res").innerHTML="Correct";
+                }
+                else
+                {
+                    document.getElementById("res").innerHTML="InCorrect";
+                }
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <center><h1>Welcome to quiz</h1></center>
+    <center><h2>All questions carry equal marks</h2></center>
+    <h1>1.What isthe captial of india?</h1><br>
+    <input type="radio" name="captial" value="Delhi">Delhi<br>
+    <input type="radio" name="captial" value="Banglore">Banglore<br>
+    <input type="radio" name="captial" value="Telangana">Telangana<br>
+    <input type="radio" name="captial" value="Mumbai">Mumbai<br>
+    <input type="button" value="Submit" onclick="res()">
+    <div id="res"></div>
+</body>
+</html>
